@@ -1,0 +1,43 @@
+.user-details{
+    display: flex;
+}
+
+
+.user-area h2{
+    letter-spacing: 3px;
+    color: blue;
+}
+img.saurav-pic{
+    height: 150px;
+    width: 150px;
+}
+#main-button{
+    background-color: #2980b9;
+    width: 100px;
+    height: 30px;
+    border: 1px solid darkgray;
+    border-radius: 5px;   
+}
+.description{
+    display: block;
+    width: 50%;
+    float: left;
+}
+.id-ditais{
+   width: 45%;
+   margin-right: 5%;
+   float: left;
+   display: block;
+}
+
+
+@media all and (max-width: 768px){
+    .user-details{
+        display: block;
+        overflow: hidden;
+    }
+    .user-seller{
+        margin-left:20px;
+        width: 50%;
+   }
+}

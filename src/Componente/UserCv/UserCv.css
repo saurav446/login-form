@@ -1,0 +1,14 @@
+.user{
+    display: flex;
+}
+.user-seller{
+     margin-left:200px;
+     width: 50%;
+}
+@media all and (max-width: 768px){
+    
+    .user-seller{
+        margin-left:20px;
+        width: 70%;
+   }
+}

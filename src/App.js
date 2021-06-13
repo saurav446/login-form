@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React  from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route 
+} from "react-router-dom"; 
+import Deshbord from './Componente/Admin/Deshbord';
+import Login from './Componente/Admin/Login';
+import SignUp from './Componente/Admin/SignUp';  
+import {AuthProviderUser, PRoute} from './Componente/Admin/UserContext'
+
 
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <AuthProviderUser> 
+      <Router>
+      <Switch>  
+          <Route path="/desh">
+           <Deshbord></Deshbord>
+          </Route> 
+          <PRoute path="/Login">
+            <Login></Login>
+          </PRoute> 
+          <Route path="/Signup">
+            <SignUp></SignUp>
+          </Route>
+          <Route path="/">
+            <SignUp></SignUp>
+          </Route> 
+      </Switch>
+        </Router> 
+        </AuthProviderUser>
+    </div>   
   );
 }
 
